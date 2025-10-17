@@ -588,10 +588,12 @@ module.exports = grammar(HTML, {
         seq(
           field('object', $._primitive),
           '[',
-          field('property', $._any_expression),
+          field('property', choice($.identifier, $.static_member_expression)),
           ']',
         ),
       ),
+
+    static_member_expression: ($) => seq($._single_quote, $.identifier, $._single_quote),
 
     // ---------- Base ----------
     _closing_bracket: (_) => token(prec(-1, '}')),
