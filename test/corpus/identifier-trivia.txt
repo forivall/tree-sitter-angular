@@ -50,3 +50,19 @@ Directive with hyphen
     (text)
     (end_tag
       (tag_name))))
+
+============
+long identifier repro
+============
+
+@switch (f === agagagagagagaga) {
+  @case (true) {
+    <button>1</button>
+  }
+  @default {
+    <button>2</button>
+  }
+}
+---
+
+
