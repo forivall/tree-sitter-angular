@@ -65,4 +65,32 @@ long identifier repro
 }
 ---
 
-
+(document
+  (switch_statement
+    (control_keyword)
+    (binary_expression
+      (expression
+        (identifier))
+      (expression
+        (identifier)))
+    (switch_body
+      (case_statement
+        (control_keyword)
+        (expression
+          (identifier))
+        (statement_block
+          (element
+            (start_tag
+              (tag_name))
+            (text)
+            (end_tag
+              (tag_name)))))
+      (default_statement
+        (control_keyword)
+        (statement_block
+          (element
+            (start_tag
+              (tag_name))
+            (text)
+            (end_tag
+              (tag_name))))))))

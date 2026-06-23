@@ -90,7 +90,7 @@ module.exports = grammar(HTML, {
 
     _switch_body_expression: ($) =>
       prec.left(
-        seq('(', field('value', $.expression), ')', field('body', $.switch_body)),
+        seq('(', field('value', $._any_expression), ')', field('body', $.switch_body)),
       ),
 
     switch_body: ($) =>
